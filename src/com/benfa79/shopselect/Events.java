@@ -24,13 +24,19 @@ public class Events implements Listener{
         player.sendMessage("Yup");
         Inventory inventory = event.getInventory();
         if (inventory.getTitle().equals(shopsInv.getTitle())) {
-            int x = ShopSelect.shops.get(event.getSlot()).x;
-            int y = ShopSelect.shops.get(event.getSlot()).y;
-            int z = ShopSelect.shops.get(event.getSlot()).z;
-            Location loc = new Location(player.getWorld(), x, y, z);
-            event.setCancelled(true);
-            player.closeInventory();
-            player.teleport(loc);
+            int selected = event.getSlot();
+            if (selected < 45) {
+                int x = ShopSelect.shops.get(selected).x;
+                int y = ShopSelect.shops.get(selected).y;
+                int z = ShopSelect.shops.get(selected).z;
+                Location loc = new Location(player.getWorld(), x, y, z);
+                event.setCancelled(true);
+                player.closeInventory();
+                player.teleport(loc);
+            }
+            if (selected==49) {
+                //Create new shop code here
+            }
         }
     }
 }
