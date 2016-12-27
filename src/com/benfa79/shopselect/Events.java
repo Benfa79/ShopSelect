@@ -24,7 +24,10 @@ public class Events implements Listener{
         player.sendMessage("Yup");
         Inventory inventory = event.getInventory();
         if (inventory.getTitle().equals(shopsInv.getTitle())) {
-            Location loc = new Location(player.getWorld(), 0, 80, 0);
+            int x = ShopSelect.shops.get(event.getSlot()).x;
+            int y = ShopSelect.shops.get(event.getSlot()).y;
+            int z = ShopSelect.shops.get(event.getSlot()).z;
+            Location loc = new Location(player.getWorld(), x, y, z);
             event.setCancelled(true);
             player.closeInventory();
             player.teleport(loc);
