@@ -53,9 +53,18 @@ public class ShopSelect extends JavaPlugin {
         shopsData = new YamlConfiguration();
         loadYamls();
         loadShops();
-        newShop("name", "owner", new ItemStack(Material.BEACON), 0, 80, 0);
-        newShop("name2", "owner2", new ItemStack(Material.BEDROCK), 10, 80, 10);
-        getLogger().info(Integer.toString(shops.size()));
+//        newShop("name", "owner", new ItemStack(Material.BEACON), 0, 80, 0);
+//        newShop("name2", "owner2", new ItemStack(Material.BEDROCK), 10, 80, 10);
+        
+        ItemStack star = new ItemStack(Material.NETHER_STAR);
+        ItemMeta meta = star.getItemMeta();
+        meta.setDisplayName("Add Shop");
+        ArrayList<String> Lore = new ArrayList<>();
+        Lore.add("Add a shop to the menu.");
+        meta.setLore(Lore);
+        star.setItemMeta(meta);
+        shopsInv.setItem(49, star);
+        
         getLogger().info("ShopSelect Enabled!");
     }
     
