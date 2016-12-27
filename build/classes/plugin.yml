@@ -1,0 +1,9 @@
+name: ShopSelect
+main: com.benfa79.shopselect.ShopSelect
+version: 1.0
+
+commands:
+    shops:
+        description: Open the shops menu.
+        usage: /shops
+    
