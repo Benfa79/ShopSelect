@@ -29,6 +29,9 @@ class Shop {
         
         
     }
+    public Shop() {
+        
+    }
  
     
     
