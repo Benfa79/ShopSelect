@@ -16,10 +16,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-/**
- *
- * @author benjaminfarias
- */
+
 public class Events implements Listener{
     
     @EventHandler
