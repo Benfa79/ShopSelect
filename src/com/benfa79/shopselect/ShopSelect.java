@@ -22,10 +22,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- *
- * @author benjaminfarias
- */
+
 public class ShopSelect extends JavaPlugin {
 
     /**
