@@ -7,10 +7,7 @@ package com.benfa79.shopselect;
 
 import org.bukkit.inventory.ItemStack;
 
-/**
- *
- * @author benjaminfarias
- */
+
 class Shop {
     String name;
     String owner;
